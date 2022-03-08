@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->uuid('RoomId')->index()->unique();
             $table->text('name');
-            $table->json('icon')->default(json_encode(['small'=>0,'regular'=>0,'large'=>0]));
+            $table->bigInteger('IconId')->default(0);
             $table->text('message');
             $table->tinyInteger('type')->default(0);
             $table->timestamps();

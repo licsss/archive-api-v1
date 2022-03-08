@@ -20,8 +20,8 @@ return new class extends Migration
             $table->text('name');
             $table->string('time',50);
             $table->tinyInteger('status')->default(3);
-            $table->json('ingredient')->default(json_encode([]));
-            $table->json('process')->default(json_encode([]));
+            $table->json('ingredient');
+            $table->json('process');
             $table->text('tip');
             $table->timestamps();
         });

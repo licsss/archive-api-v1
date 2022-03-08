@@ -20,7 +20,7 @@ return new class extends Migration
             $table->bigInteger('AccountId')->index();
             $table->bigInteger('Friend_AccountId');
             $table->text('name');
-            $table->json('tag')->default(json_encode([0,'custom'=>[]]));
+            $table->json('tag');
             $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });

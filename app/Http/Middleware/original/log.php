@@ -46,6 +46,8 @@ class log
             $log->method=$request->method();
             $log->params=$request->query();
             $log->posts=$request->except(array_merge(['password','password_confirmation'],array_keys($request->query())));
+            $log->result=[];
+            $log->error_message=[];
             $log->save();
             //accesstoken,csrf確認
             if($request->user()){

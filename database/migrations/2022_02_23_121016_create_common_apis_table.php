@@ -26,10 +26,10 @@ return new class extends Migration
             $table->json('params');
             $table->json('posts');
             $table->integer('response_code')->default(0);
-            $table->json('result')->default(json_encode([]));
+            $table->json('result');
             $table->integer('error_code')->default(0);
             $table->string('error_title')->default("");
-            $table->json('error_message')->default(json_encode([]));
+            $table->json('error_message');
             $table->timestamps();
         });
     }

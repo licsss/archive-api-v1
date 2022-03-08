@@ -20,7 +20,7 @@ return new class extends Migration
             $table->bigInteger('AccountId')->index();
             $table->tinyInteger('type')->default(0);
             $table->text('message');
-            $table->json('not_message')->default(json_encode([]));
+            $table->json('not_message');
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });
